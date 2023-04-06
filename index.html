@@ -1,32 +1,46 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>TV Show DOM Project - Level 200 Sample Solution</title>
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
-      rel="stylesheet"
-    />
+    <title>TV Show Project | Luna-Mzelo</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
   </head>
 
   <body>
-    <div id="root">
-      <div id="controls">
-        <select id="selectShow">
-
-        <input id="searchInput" type="text" placeholder="your search term..." />
-        <span id="countDisplay">Displaying n episodes</span>
-      </div>
-
-
-      </select>
-      <div id="episodes"></div>
+    <div class="nav-bar">
+    <select name="shows" id="show-options">
+      <option value="-1">Select Show</option>
+    </select>
+    <select name="episode" id="episodeOptions">
+      <option value="epi">Select episode</option>
+    </select>
+    <div>
+      <input id="search-input" type="text" placeholder=" Search...." name="search" />
+      <p id="episode-count" class="episode-count hide"></p>
     </div>
+    <button class="btn"><i class="fa fa-home"></i> Home</button>
+    <!-- <button id="episodes-home-btn" class="hide">View All Shows</button> -->
+  </div>
 
-    <script src="episodes.js"></script>
+  <div id="root" class="show-container"></div>
+ <footer class="footer">
+      <h2>The data has (originally) come from <a href="https://www.tvmaze.com/">TVMaze.com</a></h2>
+      
+    </footer>
+  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+  <!-- <script src="episodes.js"></script> -->
+
+  <!-- Loads YOUR javascript code -->
+    <!-- loading shows.js in your index.html and using the provided function: getAllShows() -->
+    <script src="shows.js"></script>
+    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+    <script src="script/episodes.js"></script>
+
+    <!-- Loads YOUR javascript code -->
     <script src="script.js"></script>
   </body>
 </html>
+
